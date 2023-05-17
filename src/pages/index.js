@@ -82,7 +82,7 @@ export default function Example() {
             <a href="#">
               <span className="sr-only">Workflow</span>
               <img
-                className="h-28 w-auto sm:h-36"
+                className="h-24 w-auto sm:h-32"
                 src="img/logo.png"                
                 alt=""
               />
