@@ -1,4 +1,5 @@
-/** @type {import('tailwindcss').Config} */
+const aspectRatio = require('@tailwindcss/aspect-ratio');
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -29,5 +30,5 @@ module.exports = {
       "cupcake",
     ],
   },
-  plugins: [ require("daisyui")],
-}
+  plugins: [require("daisyui"), aspectRatio],
+};

@@ -13,14 +13,19 @@ import {
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid'
 import { Parallax, Background } from 'react-parallax';
 
+import Link from 'next/link';
+import TreatmentChemicals from './treatment-chemicals';
+
+
 const navigation = [
-  { name: 'Treatment Chemicals', href: '#' },
-  { name: 'Municipal Wastewater', href: '#' },
-  { name: 'Industrial Wastewater', href: '#' },
-  { name: 'Pump Station Maintenance', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Our Story', href: '#' },
+  { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
+  { name: 'Municipal Wastewater', href: '#municipal-wastewater' },
+  { name: 'Industrial Wastewater', href: '#industrial-wastewater' },
+  { name: 'Pump Station Maintenance', href: '#pump-station-maintenance' },
+  { name: 'Blog', href: '#blog' },
+  { name: 'Our Story', href: '#our-story' },
 ]
+
 const features = [
   {
     name: 'Push to Deploy',
@@ -239,35 +244,20 @@ export default function Example() {
 
               <div className="home-header-container">
                 <img className="jg-logo" src="/img/jgspecialty.png" />
-                <span className='tagline'>Where Quality doesn't mean Expensive</span>
+                <span className='tagline'>Excellence in Chemistry, Affordable by Design</span>
               </div>
               
               {/* <div class="gradient-black"/> */}
             </Parallax>
           </div>
+          
+
+          
 
           <div className="static-container bg-gothicblue">
             <span>Serving Berks and Lehigh County, PA and Sanpete County, UT</span>
             <img className="locations-img" src="/img/locations.png"/>
-            {/* <div className="mx-auto max-w-md px-4 text-center sm:px-6 sm:max-w-3xl lg:px-8 lg:max-w-7xl">
-              <div>
-                <h2 className="text-base font-semibold tracking-wider text-cyan-600 uppercase">Serverless</h2>
-                <p className="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
-                  No server? No problem.
-                </p>
-                <p className="mt-5 max-w-prose mx-auto text-xl text-gray-500">
-                  Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper
-                  malesuada. Eleifend condimentum id viverra nulla.
-                </p>
-              </div>
-              <div className="mt-12 -mb-10 sm:-mb-24 lg:-mb-80">
-                <img
-                  className="rounded-lg shadow-xl ring-1 ring-black ring-opacity-5"
-                  src="https://tailwindui.com/img/component-images/green-project-app-screenshot.jpg"
-                  alt=""
-                />
-              </div>
-            </div> */}
+            {}
           </div>
 
           {/* Feature section with grid */}
@@ -527,5 +517,6 @@ export default function Example() {
         </footer>
       </div>
     </div>
+    
   )
 }
