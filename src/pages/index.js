@@ -19,7 +19,7 @@ import TreatmentChemicals from './treatment-chemicals';
 
 const navigation = [
   { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
-  { name: 'Municipal Wastewater', href: '#municipal-wastewater' },
+  { name: 'Municipal Wastewater', href: '/municipal-wastewater' },
   { name: 'Industrial Wastewater', href: '#industrial-wastewater' },
   { name: 'Pump Station Maintenance', href: '#pump-station-maintenance' },
   { name: 'Blog', href: '#blog' },
