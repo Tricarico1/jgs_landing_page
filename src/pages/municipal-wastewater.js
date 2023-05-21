@@ -1,5 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Popover } from '@headlessui/react';
+import Header from '../components/header';
+
 
 const navigation = [
     { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
@@ -32,57 +34,36 @@ const faqs = [
   
   export default function Example() {
     return (
-      <div className="bg-gothicblue">
-        <div className="relative overflow-hidden py-16">
-
-        <Popover as="header" className="relative">
-            <div className="flex items-center flex-1 justify-center">
-                <nav className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
-                <div className="flex items-center flex-1 justify-center">
-                    <div className="hidden space-x-10 md:flex">
-                    {navigation.map((item) => (
-                        <a
-                        key={item.name}
-                        href={item.href}
-                        className="text-base font-medium text-black hover:text-gray-300"
-                        >
-                        {item.name}
-                        </a>
-                    ))}
-                    </div>
+      <>
+        <div className="bg-gothicblue">
+          <Header/>
+          <div className="bg-rosebrown"> 
+            <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+              <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+                <div>
+                  <h2 className="text-3xl font-extrabold text-gray-900">Municipal Wastewater Treatment</h2>
+                  <p className="mt-4 text-lg text-gray-500">
+                  For further questions, contact our {' '}
+                    <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                      customer support
+                    </a>{' '}
+                    team.
+                  </p>
                 </div>
-                </nav>
-            </div>
-        </Popover>
-        <div className="bg-rosebrown"> 
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
-
-          <div className="lg:grid lg:grid-cols-3 lg:gap-8">
-            <div>
-              <h2 className="text-3xl font-extrabold text-gray-900">Municipal Wastewater Treatment</h2>
-              <p className="mt-4 text-lg text-gray-500">
-              For further questions, contact {' '}
-                <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                  customer support
-                </a>{' '}
-                team.
-              </p>
-            </div>
-            <div className="mt-12 lg:mt-0 lg:col-span-2">
-              <dl className="space-y-12">
-                {faqs.map((faq) => (
-                  <div key={faq.question}>
-                    <dt className="text-lg leading-6 font-medium text-gray-900">{faq.question}</dt>
-                    <dd className="mt-2 text-base text-gray-500">{faq.answer}</dd>
-                  </div>
-                ))}
-              </dl>
+                <div className="mt-12 lg:mt-0 lg:col-span-2">
+                  <dl className="space-y-12">
+                    {faqs.map((faq) => (
+                      <div key={faq.question}>
+                        <dt className="text-lg leading-6 font-medium text-gray-900">{faq.question}</dt>
+                        <dd className="mt-2 text-base text-gray-500">{faq.answer}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-         </div>
-         </div>
-         </div>
+      </>
     )
   }
-  

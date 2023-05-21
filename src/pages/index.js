@@ -15,6 +15,8 @@ import { Parallax, Background } from 'react-parallax';
 
 import Link from 'next/link';
 import TreatmentChemicals from './treatment-chemicals';
+import Header from '../components/header';
+
 
 
 const navigation = [
@@ -212,28 +214,8 @@ export default function Example() {
   return (
     <div className="bg-rosebrown">
       <div className="relative overflow-hidden">
-        <Popover as="header" className="relative">
-          <div className="w-screen pt-6 pb-6">
-            <nav
-              className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
-              aria-label="Global"
-            >
-              <div className="flex items-center flex-1 justify-center">
-                <div className="hidden space-x-10 md:flex">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="text-base font-medium text-black hover:text-gray-300"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </nav>
-          </div>
-        </Popover>
+        <Header />
+      
 
         <main>
           <div className="parallax-container">

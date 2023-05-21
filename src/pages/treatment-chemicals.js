@@ -7,6 +7,8 @@ import {
     ServerIcon,
     ShieldCheckIcon,
   } from '@heroicons/react/outline'
+
+  import Header from '../components/header';
   
   const features = [
     {
@@ -111,7 +113,12 @@ import {
   
   export default function Example() {
     return (
-      <div className="relative bg-rosebrown py-16 sm:py-24 lg:py-32">
+      <>
+      <div className="bg-gothicblue">
+
+      <Header/>
+      
+      <div className="relative bg-rosebrown sm:py-24">
         <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
           <h2 className="text-base font-semibold uppercase tracking-wider text-indigo-600">Deploy faster</h2>
           <p className="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -155,6 +162,8 @@ import {
           </div>
         </div>
       </div>
+      </div>
+      </>
     )
   }
   
