@@ -6,7 +6,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
   { name: 'Municipal Wastewater', href: '/municipal-wastewater' },
-  { name: 'Industrial Wastewater', href: '#industrial-wastewater' },
+  { name: 'Industrial Wastewater', href: '/industrial-wastewater' },
   { name: 'Pump Station Maintenance', href: '#pump-station-maintenance' },
   { name: 'Blog', href: '#blog' },
   { name: 'Our Story', href: '#our-story' },
