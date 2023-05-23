@@ -13,14 +13,21 @@ import {
 import { ChevronRightIcon, ExternalLinkIcon } from '@heroicons/react/solid'
 import { Parallax, Background } from 'react-parallax';
 
+import Link from 'next/link';
+import TreatmentChemicals from './treatment-chemicals';
+import Header from '../components/header';
+
+
+
 const navigation = [
-  { name: 'Treatment Chemicals', href: '#' },
-  { name: 'Municipal Wastewater', href: '#' },
-  { name: 'Industrial Wastewater', href: '#' },
-  { name: 'Pump Station Maintenance', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Our Story', href: '#' },
+  { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
+  { name: 'Municipal Wastewater', href: '/municipal-wastewater' },
+  { name: 'Industrial Wastewater', href: '#industrial-wastewater' },
+  { name: 'Pump Station Maintenance', href: '#pump-station-maintenance' },
+  { name: 'Blog', href: '#blog' },
+  { name: 'Our Story', href: '#our-story' },
 ]
+
 const features = [
   {
     name: 'Push to Deploy',
@@ -233,29 +240,8 @@ export default function Homepage() {
   return (
     <div className="bg-rosebrown">
       <div className="relative overflow-hidden">
-        <Popover as="header" className="relative">
-          <div className="w-screen pt-6 pb-6">
-            <nav
-              className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
-              aria-label="Global"
-            >
-              <div className="flex items-center flex-1 justify-center">
-                <div className="hidden space-x-10 md:flex">
-                  {/* <img src="/img/Logo.png" style={{height:100}}/> */}
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="nav-text text-base font-medium text-black hover:text-gray-300"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            </nav>
-          </div>
-        </Popover>
+        <Header />
+      
 
         <main>
           <div className="parallax-container">
@@ -266,12 +252,15 @@ export default function Homepage() {
 
               <div className="parallax-foreground-container">
                 <img className="jg-logo" src="/img/jgspecialty.png" />
-                <span className='tagline'>Excellent in chemistry, affordable by design</span>
+                <span className='tagline'>Excellence in Chemistry, Affordable by Design</span>
               </div>
               
               {/* <div class="gradient-black"/> */}
             </Parallax>
           </div>
+          
+
+          
 
           <div className="static-container bg-gothicblue">
             <span>Serving Berks and Lehigh County, PA and Sanpete County, UT</span>
@@ -395,5 +384,6 @@ export default function Homepage() {
         </footer>
       </div>
     </div>
+    
   )
 }
