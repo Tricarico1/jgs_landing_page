@@ -9,6 +9,8 @@ img.img-preload {
 .parallax-container {
   height: 600px;
   display: flex;
+  width: '100vw'; //Added this
+  height: '100vh'; //Added this
 
   background-color: black;
 
@@ -125,6 +127,9 @@ img.img-preload {
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  margin-top: 400px;
+  position: relative; //Changed
+  
 
   .locations-img {
     max-width: 800px;
