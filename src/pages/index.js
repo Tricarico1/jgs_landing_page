@@ -218,10 +218,11 @@ export default function Example() {
       
 
         <main>
-          <div className="parallax-container">
+          <div className="parallax-container ">
+
             <Parallax className="w-full h-full" strength={500}>
-              <Background className="image-container">
-                <img className="max-w-full min-w-w-screen" src="/img/stock2.jpg"></img>
+              <Background className="image-container" >
+                <img className="max-w-full min-w-w-screen max-h-full lg:py-" src="/img/stock2.jpg"></img>
               </Background>
 
               <div className="home-header-container">
@@ -232,6 +233,28 @@ export default function Example() {
               {/* <div class="gradient-black"/> */}
             </Parallax>
           </div>
+
+          <div style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
+            <div style={{maxWidth: '500px'}}>
+              <label htmlFor="search" className="block text-sm font-medium text-black">
+                Quick search for chemicals
+              </label>
+              <div className="mt-1 relative flex items-center">
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md"
+                />
+                <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
+                  <kbd className="inline-flex items-center border border-gray-200 rounded px-2 text-sm font-sans font-medium text-gray-400">
+                    ⌘K
+                  </kbd>
+                </div>
+              </div>
+            </div>
+          </div>
+
           
 
           
@@ -241,6 +264,14 @@ export default function Example() {
             <img className="locations-img" src="/img/locations.png"/>
             {}
           </div>
+
+
+
+
+
+
+
+
 
           {/* Feature section with grid */}
           <div className="relative bg-white py-16 sm:py-24 lg:py-32">
