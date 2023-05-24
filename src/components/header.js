@@ -14,8 +14,9 @@ const navigation = [
 
 export default function Header() {
   return (
-    <Popover as="header" className="relative">
-      <div className="w-screen pt-6 pb-6">
+    // Apply fixed, top-0 and z-50 classes here
+    <Popover as="header" className="fixed top-0 z-50 w-full">
+      <div className="w-screen pt-6 pb-6 bg-gothicblue">
         <nav
           className="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6"
           aria-label="Global"
@@ -39,4 +40,3 @@ export default function Header() {
     </Popover>
   );
 }
-

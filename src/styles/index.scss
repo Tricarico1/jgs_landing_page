@@ -6,6 +6,8 @@
 .parallax-container {
   height: 600px;
   display: flex;
+  width: '100vw'; //Added this
+  height: '100vh'; //Added this
 
   background-color: black;
   
@@ -52,12 +54,14 @@
 }
 
 .static-container {
-  padding: 50px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  margin-top: 400px;
+  position: relative; //Changed
+  
 
   .locations-img {
     max-width: 800px;
