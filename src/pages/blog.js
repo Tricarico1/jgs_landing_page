@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Header from '@/components/header';
 import { Parallax, Background } from 'react-parallax';
 import ReactMarkdown from 'react-markdown'
@@ -18,8 +18,10 @@ export async function getStaticProps() {
 export default function Blog({allPostsData}) {
 
   const [activePost, setActivePost] = useState(allPostsData[0]);
+  const modalRef = useRef(null);
 
   return (
+    
     <div className="page-wrapper bg-rosebrown">
       <Header />
 
@@ -38,20 +40,14 @@ export default function Blog({allPostsData}) {
 
       {activePost ? (
         <div className="modal-background" onClick={() => setActivePost(null)}>
-          <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-          <div className="parallax-container ">
-            <Parallax className="w-full h-full" strength={500}>
-              <Background className="image-container">
-                <img className="max-w-full min-w-w-screen" src="/img/stockHeader.jpg"></img>
-              </Background>
-
-              <div className="parallax-foreground-container">
-                <img className="jg-logo" src="/img/jgspecialty.png" />
-                <span className='tagline'>Excellence in Chemistry, Affordable by Design</span>
-              </div>
-              
-              {/* <div class="gradient-black"/> */}
-            </Parallax>
+          <div className="modal-container" ref={modalRef} onClick={(e) => e.stopPropagation()}>
+            <div className="parallax-container">
+              <Parallax className="modal-parallax" strength={500} parent={modalRef.current}>
+                <Background className="image-container">
+                  <img className="max-w-full min-w-w-screen" src="/img/stockHeader.jpg"></img>
+                </Background>                
+                <div class="gradient-black"/>
+              </Parallax>
             </div>
             <p className="blogpost-header">{activePost.title}</p>
             <p className="blogpost-date">{activePost.date}</p>
@@ -61,6 +57,7 @@ export default function Blog({allPostsData}) {
             </div>
           </div>
         </div>
+        
       ) : null}
       
         
