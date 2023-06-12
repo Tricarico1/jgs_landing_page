@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Header from '@/components/header';
 import { Parallax, Background } from 'react-parallax';
 import ReactMarkdown from 'react-markdown'
@@ -17,8 +17,13 @@ export async function getStaticProps() {
 
 export default function Blog({allPostsData}) {
 
-  const [activePost, setActivePost] = useState(allPostsData[0]);
+  const [activePost, setActivePost] = useState(null);
   const modalRef = useRef(null);
+
+  useEffect(() => {
+    console.log(window.location.pathname.split("#")[1]);
+
+  });
 
   return (
     
@@ -44,7 +49,7 @@ export default function Blog({allPostsData}) {
             <div className="parallax-container">
               <Parallax className="modal-parallax" strength={500} parent={modalRef.current}>
                 <Background className="image-container">
-                  <img className="max-w-full min-w-w-screen" src="/img/stockHeader.jpg"></img>
+                  <img className="max-w-full min-w-w-screen" src={activePost.image}></img>
                 </Background>                
                 <div class="gradient-black"/>
               </Parallax>

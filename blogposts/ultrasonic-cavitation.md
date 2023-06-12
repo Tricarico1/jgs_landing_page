@@ -1,7 +1,7 @@
 ---
 title: 'Ultrasonic Cavitation'
 date: 'June 1, 2021'
-image: '/img/stock1.bmp'
+image: '/img/blogimages/ultrasonic.bmp'
 ---
 
 **Background**
