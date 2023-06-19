@@ -1,6 +1,6 @@
 ---
 title: 'Shrinking Water Supplies - The Problem is Here Now'
-date: 'June 1, 2021'
+date: '6/1/2021'
 image: '\img\blogimages\6gxixyjk.bmp'
 ---
 **Agricultural Irrigation – Water Use Demand**

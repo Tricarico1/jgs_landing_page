@@ -3,9 +3,14 @@
 
   .blog-index-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+    grid-template-columns: repeat(2, minmax(0, 500px)); /* Two columns with equal width */
     grid-gap: 10px; /* Add a gap between grid items */
     padding: 20px;
+    justify-content: center;
+
+    @media only screen and (max-width: 770px) {
+      grid-template-columns: repeat(1, minmax(0, 500px));
+    }
 
     .blog-preview-card {
       cursor: pointer;

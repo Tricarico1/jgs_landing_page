@@ -1,8 +1,9 @@
 ---
 title: 'Water Scarcity, Protection of Water Sources and Bio-Solids'
-date: 'May 30, 2021'
+date: '5/30/2021'
 image: '\img\blogimages\bkc6vh93.bmp'
 ---
+
 **Water Scarcity**
 
 Today many topics of discussion and concerns among the environmental crowd as well as general population are water quality, air quality and climate related. In many cases, conditions surrounding these topics are interrelated. While air quality and climatic changes have been in the forefront for as long as I can remember, water as it relates to its most suitable and beneficial end use is a more recent topic. While the earth is about 70 percent covered by water, not all of it is available and not all of it is usable for the desired purpose without comparatively high treatment costs. In fact, only about 3 percent is fresh water of which about 60percent is locked up in glaciers and ice caps. This leaves about 1 percent of all the fresh water on earth (about 3.25million trillion gallons) available to meet the needs of everyone here. Keep in mind, this 1 percent also contains the polluted fresh water volumes as well. 
