@@ -60,6 +60,10 @@ img.img-preload {
         color: rgb(255, 255, 255);
         text-align: center;
         width: 100%;
+
+        @media only screen and (max-width: 700px) {
+          font-size: 32px;
+        }
       }
 
       div.text-container {
@@ -120,11 +124,43 @@ img.img-preload {
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  margin-top: 400px;
+  // margin-top: 400px;
   position: relative; //Changed
   
 
   .locations-img {
     max-width: 800px;
+  }
+}
+
+.footer-container {
+
+  .contact-form {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 10px;
+      min-width: 350px;
+      min-height: 40px;
+      background-color: #6ba2c4;
+      border-radius: 10px;
+      border: 1px solid rgb(0, 58, 85);
+
+      &::placeholder {
+        color: white;
+      }
+    }
+
+    textarea {
+      min-height: 150px;
+    }
+
+    input[type=submit] {
+      color: white;
+      box-shadow: 0 0 5px 0px rgb(0, 58, 85);
+    }
   }
 }

@@ -17,17 +17,6 @@ import Link from 'next/link';
 import TreatmentChemicals from './treatment-chemicals';
 import Header from '../components/header';
 
-
-
-const navigation = [
-  { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
-  { name: 'Municipal Wastewater', href: '/municipal-wastewater' },
-  { name: 'Industrial Wastewater', href: '#industrial-wastewater' },
-  { name: 'Pump Station Maintenance', href: '#pump-station-maintenance' },
-  { name: 'Blog', href: '#blog' },
-  { name: 'Our Story', href: '#our-story' },
-]
-
 const footerNavigation = {
   solutions: [
     { name: 'Marketing', href: '#' },
@@ -167,35 +156,10 @@ export default function Homepage() {
             </Parallax>
           </div>
 
-          <div style={{ display: 'flex', justifyContent: 'center', padding: '50px' }}>
-            <div style={{maxWidth: '500px'}}>
-              <label htmlFor="search" className="block text-sm font-medium text-black">
-                Quick search for chemicals
-              </label>
-              <div className="mt-1 relative flex items-center">
-                <input
-                  type="text"
-                  name="search"
-                  id="search"
-                  className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-12 sm:text-sm border-gray-300 rounded-md"
-                />
-                <div className="absolute inset-y-0 right-0 flex py-1.5 pr-1.5">
-                  <kbd className="inline-flex items-center border border-gray-200 rounded px-2 text-sm font-sans font-medium text-gray-400">
-                    ⌘K
-                  </kbd>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          
-
-          
-
-          <div className="static-container bg-gothicblue">
+          {/* <div className="static-container bg-gothicblue">
             <span>Serving Berks and Lehigh County, PA and Sanpete County, UT</span>
             <img className="locations-img" src="/img/locations.png"/>
-          </div>
+          </div> */}
 
           <div className="static-container bg-white">
             <div className="parallax-container wide">
@@ -228,7 +192,8 @@ export default function Homepage() {
             </div>
           </div>
         </main>
-        <footer className="bg-gothicblue" aria-labelledby="footer-heading">
+        
+        <footer className="footer-container bg-gothicblue" aria-labelledby="footer-heading">
           <h2 id="footer-heading" className="sr-only">
             Footer
           </h2>
@@ -237,12 +202,20 @@ export default function Homepage() {
               <div className="space-y-8 xl:col-span-1">
                 <img
                   className="h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-gray-300.svg"
+                  src="/img/jgspecialty.png"
                   alt="Company name"
                 />
-                <p className="text-gray-500 text-base">
-                  Making the world a better place through constructing elegant hierarchies.
+                <p className="text-base px-3">
+                  Let us know what's on your mind. We'd like to hear from you.
                 </p>
+                <div className="flex space-x-6">
+                  <form className='contact-form'>
+                    <input id="contact-name" name="contactname" type="text" placeholder="Your name"/>
+                    <input id="contact-email" name="contactemail" type="text" placeholder="Your email address"/>
+                    <textarea id="contact-message" name="contactmsg" type="text" placeholder="Please type your message here"/>
+                    <input type="submit" value="Submit" />
+                  </form>
+                </div>
                 <div className="flex space-x-6">
                   {footerNavigation.social.map((item) => (
                     <a key={item.name} href={item.href} className="text-gray-400 hover:text-gray-500">

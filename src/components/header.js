@@ -1,5 +1,5 @@
 import { Popover } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline'
 import { useState } from 'react';
 
 const navigation = [
@@ -33,9 +33,9 @@ export default function Header() {
               <button onClick={(e) => {
                 setDropdownState(!dropdownState);
                 e.stopPropagation();
-              }} key={'wwd'} href="/" className="nav-drop-trigger">
-                What We Do
-                <ChevronDownIcon />
+              }} key={'solutions'} href="/" className="nav-drop-trigger hover:text-gray-300">
+                <span>Solutions</span>
+                {dropdownState ? <ChevronUpIcon /> : <ChevronDownIcon />}
 
                 <div className={`nav-dropdown-container bg-gothicblue ${dropdownState ? 'active' : ''}`}>
                   <a className="nav-dropdown-item" href='/treatment-chemicals'>
