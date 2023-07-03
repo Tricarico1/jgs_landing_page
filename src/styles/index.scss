@@ -135,32 +135,55 @@ img.img-preload {
 
 .footer-container {
 
-  .contact-form {
-    padding-left: 10px;
+  .footer-content-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 
-    input, textarea {
-      padding: 10px;
-      margin-bottom: 10px;
-      min-width: 350px;
-      min-height: 40px;
-      background-color: #6ba2c4;
-      border-radius: 10px;
-      border: 1px solid rgb(0, 58, 85);
+      
+    img.logo {
+      width: 400px;
+    }
 
-      &::placeholder {
+    .blurb {
+      font-size: 18px;
+      margin: 20px 20px 30px 20px;
+    }
+
+    .contact-form {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+  
+      input, textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        min-width: 200px;
+        max-width: 500px;
+        width: 100%;
+        min-height: 40px;
+        background-color: #6ba2c4;
+        border-radius: 10px;
+        border: 1px solid rgb(0, 58, 85);
+  
+        &::placeholder {
+          color: white;
+        }
+      }
+  
+      textarea {
+        min-height: 150px;
+      }
+  
+      input[type=submit] {
         color: white;
+        box-shadow: 0 0 5px 0px rgb(0, 58, 85);
       }
     }
 
-    textarea {
-      min-height: 150px;
-    }
-
-    input[type=submit] {
-      color: white;
-      box-shadow: 0 0 5px 0px rgb(0, 58, 85);
-    }
   }
 }
