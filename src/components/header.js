@@ -33,18 +33,18 @@ export default function Header() {
               <button onClick={(e) => {
                 setDropdownState(!dropdownState);
                 e.stopPropagation();
-              }} key={'solutions'} href="/" className="nav-drop-trigger hover:text-gray-300">
-                <span>Solutions</span>
+              }} key={'solutions'} href="/" className="nav-drop-trigger">
+                <span className="hover:text-gray-300">Solutions</span>
                 {dropdownState ? <ChevronUpIcon /> : <ChevronDownIcon />}
 
                 <div className={`nav-dropdown-container bg-gothicblue ${dropdownState ? 'active' : ''}`}>
-                  <a className="nav-dropdown-item" href='/treatment-chemicals'>
+                  <a className="nav-dropdown-item hover:text-gray-300" href='/treatment-chemicals'>
                     Treatment Chemicals
-                  </a><a className="nav-dropdown-item" href='/municipal-wastewater'>
+                  </a><a className="nav-dropdown-item hover:text-gray-300" href='/municipal-wastewater'>
                     Municipal Wastewater
-                  </a><a className="nav-dropdown-item" href='/industrial-wastewater'>
+                  </a><a className="nav-dropdown-item hover:text-gray-300" href='/industrial-wastewater'>
                     Industrial Wastewater
-                  </a><a className="nav-dropdown-item" href='/pump-station-maintenance'>
+                  </a><a className="nav-dropdown-item hover:text-gray-300" href='/pump-station-maintenance'>
                     Pump Station Maintenance
                   </a>
                 </div>

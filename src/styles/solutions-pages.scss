@@ -1,0 +1,78 @@
+.flippypage {
+  height: 100%;
+  
+  .content-container {
+    display: flex; 
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .flip-card {
+      margin: 10px;
+      background-color: transparent;
+      min-width: 350px;
+      min-height: 450px;
+      // perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+    
+      &:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+    
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.3s;
+        transform-style: preserve-3d;
+    
+        .flip-card-front, .flip-card-back {
+          border-radius: 20px;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden; /* Safari */
+          backface-visibility: hidden;
+          box-shadow: 0 0 10px rgb(0, 0, 0);
+        }
+      
+        .flip-card-front {
+          background-color: rgb(241, 241, 241);
+          color: black;
+          padding: 10px;
+          
+
+          .card-header {
+            font-size: 24px;
+            font-weight: bold;
+          }
+
+          .card-description {
+            margin-top: 20px;
+            text-align: justify;
+          }
+        }
+      
+        .flip-card-back {
+          background-color: #497d95;
+          color: white;
+          transform: rotateY(180deg);
+
+          .items-list {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+
+            span {
+              margin-bottom: 2px;
+              text-align: start;
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

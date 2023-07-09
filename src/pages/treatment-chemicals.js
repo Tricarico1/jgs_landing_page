@@ -15,7 +15,7 @@ import {
 
   import Header from '../components/header';
   
-  const features = [
+  const products = [
     {
       name: 'Coagulants',
       items: [
@@ -58,7 +58,7 @@ import {
         'DADMAC', 
         'Dry and Emulsion Nonionic Polymers'
       ],      
-     icon: MenuAlt3Icon,
+      icon: MenuAlt3Icon,
       tooltip: 'Normally, once coagulants  begin bringing stuff in the water together, flocculants are added to make those particles both bigger and stronger to make their removal easier.  One exception to this is dewatering sludge.  Often times sludge is dewatered with flocculants only , though the use of a coagulant may result in less sludge particles returned to the treatment system and/or drier sludge with less water in it.',
     },
 
@@ -81,7 +81,7 @@ import {
         'Sodium Bicarbonate',
         'Lime'
       ],      
-       icon: MenuAlt2Icon,
+      icon: MenuAlt2Icon,
       tooltip: 'Many times chemicals added to water to treat or remove pollutants cause the pH to either decrease or increase to the point where it has a negative effect on the receiving waters.  To help fix this problem, chemicals are added to increase or decrease the pH as needed.',
     },
     {
@@ -97,7 +97,7 @@ import {
         'Calcium Chloride',
         'Solvents'
       ],      
-     icon: MenuAlt4Icon,
+      icon: MenuAlt4Icon,
       tooltip: 'These are somewhat general and are used to fix some very specific issues that may help some of the other treatment chemical groups.',
     },
     {
@@ -110,7 +110,7 @@ import {
         'De-Chlor Tablets (Tablet - Calcium Bisulfite)', 
         'Defoamer (Aid)'
       ],      
-     icon: MenuAlt3Icon,
+      icon: MenuAlt3Icon,
       tooltip: 'These chemicals are added to inactivate many of the pathogenic bacteria.  Once disinfection is completed, de-chlorination chemicals are added to remove enough of the excess chlorine to make the water less hazardous to the things living in the receiving waters.',
 
     },
@@ -119,52 +119,51 @@ import {
   
   export default function Example() {
     return (
-      <>
-      <div className="bg-gothicblue">
+      <div className="page-wrapper bg-gothicblue">
         <Header/>
-        <div className="relative bg-rosebrown sm:py-24">
+        <div className="flippypage bg-rosebrown">
           <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
-            <h2 className="text-5xl  font-extrabold text-gray-900">Municipal Wastewater Treatment</h2>
+            <h2 className="text-5xl  font-extrabold text-gray-900">Treatment</h2>
             <h2 className="text-2xl sm:py-6 font-extrabold text-blue-900">Hover for the description</h2>
+          </div>
 
-            {/* your other elements */}
-            <div className="mt-12">
-            <div className="mt-12 flex gap-5 flex-wrap justify-center">
-              {
-                  features.map((feature) => (
-                      <div key={feature.name} className="pt-6 group relative">
-                          <div className="flow-root rounded-lg bg-gray-50 px-4 pb-8">
-                              <div className="-mt-6">
-                                  {/* Tooltip */}
-                                  <div className="hidden group-hover:block fixed z-10 w-64 p-2 bg-gray-300 bg-opacity-90 text-gray-700 rounded-md shadow-lg top-15 right-0">
-                                      {feature.tooltip}
-                                  </div>
-                                  {/* End Tooltip */}
-                                  <div>
-                                      <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-3 shadow-lg">
-                                          <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                                      </span>
-                                  </div>
-                                  <h3 className="mt-8 text-lg font-medium tracking-tight text-gray-900">{feature.name}</h3>
-                                  <div className="mt-8">
-                                      <ul className="list-disc list-inside">
-                                          {feature.items.map((item, index) => (
-                                              <li key={index} className="text-base text-gray-500 text-left">{item}</li>
-                                          ))}
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  ))
-              }
-  
-              </div>
-            </div>
+          <div className="content-container">
+            {products.map( product => (
+              <div className="flip-card">
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <span className="card-header">{product.name}</span>
+                    <p className="card-description">{product.tooltip}</p>
+                  </div>
+                  <div class="flip-card-back">
+                    <p className="items-list">
+                      {product.items.map(i => (<span>• {i}</span>))}
+                    </p>
+                  </div>
+                </div>
+              </div> 
+            ))}
           </div>
         </div>
-        </div>
-      </>
+        {/* <div className="relative bg-rosebrown sm:py-24">
+          <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 className="text-5xl  font-extrabold text-gray-900">Treatment</h2>
+            <h2 className="text-2xl sm:py-6 font-extrabold text-blue-900">Hover for the description</h2>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img_avatar.png" alt="Avatar"/>
+              </div>
+              <div class="flip-card-back">
+                <h1>John Doe</h1>
+                <p>Architect & Engineer</p>
+                <p>We love that guy</p>
+              </div>
+            </div>
+          </div> 
+        </div> */}
+      </div>
     )
   }
   
