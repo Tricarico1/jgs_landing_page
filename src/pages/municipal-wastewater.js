@@ -50,7 +50,7 @@ const faqs = [
                     team.
                   </p>
                 </div>
-                <div className="mt-12 lg:mt-0 lg:col-span-2">
+                <div className="wastewater-container mt-12 lg:mt-0 lg:col-span-2">
                   <dl className="space-y-12">
                     {faqs.map((faq) => (
                       <div key={faq.question}>

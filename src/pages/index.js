@@ -168,6 +168,10 @@ export default function Homepage() {
               <div className="parallax-foreground-container">
                 <img className="jg-logo" src="/img/jgspecialty.png" />
                 <span className='tagline'>Excellence in Chemistry, Affordable by Design</span>
+                {/* insert here */}
+                <div className="arrow bounce">
+                  <ChevronRightIcon style={{ transform: 'rotate(90deg)', width: '75px', height: '75px' }} className="text-white" aria-hidden="true" />
+                </div>
               </div>
               
               {/* <div class="gradient-black"/> */}
@@ -178,6 +182,10 @@ export default function Homepage() {
             <span>Serving Berks and Lehigh County, PA and Sanpete County, UT</span>
             <img className="locations-img" src="/img/locations.png"/>
           </div> */}
+
+
+          
+          
 
           <div className="static-container bg-white">
             <div className="parallax-container wide">
