@@ -76,3 +76,37 @@
     }
   }
 }
+@media only screen and (max-width: 1020px) {
+  .page-header-image-container {
+    height: 300px;
+    overflow: hidden;
+  
+    .page-header-image {
+      margin-bottom: 0px;
+      height: 450px;
+    }
+  }
+}
+
+
+.page-header-text {
+  top: 75px;
+
+  @media only screen and (max-width: 1020px) {
+    top: 30px;
+  }
+}
+
+.bullet-list {
+  padding-left: 20px;
+}
+
+.text-body {
+  p {
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-style: italic;
+  }
+}

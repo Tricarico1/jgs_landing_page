@@ -23,12 +23,13 @@ export default function Example() {
       <Header />
       
       <img
-            className="h-full w-full object-cover opacity-25 absolute inset-0"
-            src="/img/pipes.png"
-            alt="People working on laptops"
-          />
+        className="h-full w-full object-cover opacity-25 absolute inset-0"
+        src="/img/pipes.png"
+        alt="People working on laptops"
+      />
+      
       <div className="bg-rosebrown">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-flow-col-dense xl:gap-x-8">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-flow-col-dense xl:gap-x-8">
           <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
             <h2 className="text-xl font-semibold text-indigo-500 tracking-wide uppercase">Odor Control</h2>
             <p className="mt-3 text-5xl font-extrabold text-black">
@@ -45,8 +46,8 @@ export default function Example() {
                 </p>
               ))}
             </div>
-            </div>
-            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
