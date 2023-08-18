@@ -1,6 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Popover } from '@headlessui/react';
 import Header from '../components/header';
+import Footer from '@/components/footer';
+import { Parallax, Background } from 'react-parallax';
+
 
 const navigation = [
   { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
@@ -21,13 +24,16 @@ export default function Example() {
   return (
     <div className="bg-gothicblue">
       <Header />
-      
-      <img
-        className="h-full w-full object-cover opacity-25 absolute inset-0"
-        src="/img/pipes.png"
-        alt="People working on laptops"
-      />
-      
+
+      <div className="parallax-container pump-station-parallax">
+        <Parallax className="w-full h-full" strength={500}>
+          <Background className="image-container">
+            <img src="/img/pipes.png"></img>
+          </Background>
+        {/* <div class="gradient-black"/> */}
+        </Parallax>
+      </div>
+    
       <div className="bg-rosebrown">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-flow-col-dense xl:gap-x-8">
           <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
@@ -41,7 +47,7 @@ export default function Example() {
                 <p key={item.id}>
                   <span className="block text-2xl font-bold text-black">{item.stat}</span>
                   <span className="mt-1 block text-xl text-black">
-                    <span className="font-medium text-white">{item.emphasis}</span> {item.rest}
+                    <span className="font-medium text-indigo-500">{item.emphasis}</span> {item.rest}
                   </span>
                 </p>
               ))}
@@ -49,6 +55,8 @@ export default function Example() {
           </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

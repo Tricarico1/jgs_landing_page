@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Header from '@/components/header';
+import Footer from '@/components/footer';
 import { Parallax, Background } from 'react-parallax';
 import ReactMarkdown from 'react-markdown'
 
@@ -65,7 +66,7 @@ export default function Blog({allPostsData}) {
         
       ) : null}
       
-        
+      <Footer />
     </div>
   )
 }

@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Popover } from '@headlessui/react';
 import Header from '../components/header';
+import Footer from '@/components/footer';
 
 const navigation = [
   { name: 'Treatment Chemicals', href: '/treatment-chemicals' },
@@ -54,6 +55,8 @@ export default function Example() {
             </div>
             </div>
       </div>
+
+      <Footer />
     </div>
   );
 }

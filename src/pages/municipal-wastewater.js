@@ -1,6 +1,7 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Popover } from '@headlessui/react';
 import Header from '../components/header';
+import Footer from '@/components/footer';
 
 
 const navigation = [
@@ -34,36 +35,75 @@ const faqs = [
   
   export default function Example() {
     return (
-      <>
-        <div className="bg-gothicblue">
-          <Header/>
-          <div className="bg-rosebrown"> 
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
-              <div className="lg:grid lg:grid-cols-3 lg:gap-8">
-                <div>
-                  <h2 className="text-3xl font-extrabold text-gray-900">Municipal Wastewater Treatment</h2>
-                  <p className="mt-4 text-lg text-gray-500">
-                  For further questions, contact our {' '}
-                    <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-                      customer support
-                    </a>{' '}
-                    team.
-                  </p>
-                </div>
-                <div className="wastewater-container mt-12 lg:mt-0 lg:col-span-2">
-                  <dl className="space-y-12">
-                    {faqs.map((faq) => (
-                      <div key={faq.question}>
-                        <dt className="text-lg leading-6 font-medium text-gray-900">{faq.question}</dt>
-                        <dd className="mt-2 text-base text-gray-500">{faq.answer}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                </div>
+      <div className="bg-gothicblue">
+        <Header />
+        <div className="relative bg-rosebrown">
+          <div className="lg:absolute lg:inset-0">
+            <div className="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
+              <div className="page-header-image-container">
+                <img
+                  className="municipal-image page-header-image h-56 w-full object-cover lg:absolute lg:h-full"
+                  src="/img/stock1.bmp"
+                  alt=""
+                />
+              </div>
+
+              <div className="municipal-header text-center">
+                <h2 className="text-5xl font-semibold uppercase">Municipal Wastewater</h2>
+                <p className="mt-2 text-3xl font-medium">Services</p>
+              </div>
+            </div>
+          </div>
+          <div className="relative z-10 py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:grid lg:grid-cols-2">
+            <div className="lg:col-start-2 lg:pl-8">
+              <div className="text-base max-w-prose mx-auto lg:max-w-lg lg:ml-auto lg:mr-0">
+                <dl className="space-y-12">
+                  {faqs.map((faq) => (
+                    <div key={faq.question}>
+                      <dt className="text-lg leading-6 font-medium text-gray-900">{faq.question}</dt>
+                      <dd className="mt-2 text-base text-gray-500">{faq.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
             </div>
           </div>
         </div>
-      </>
+        <Footer />
+      </div>
+    );
+
+    return (
+      <div className="bg-gothicblue">
+        <Header/>
+        <div className="bg-rosebrown"> 
+          <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+            <div className="lg:grid lg:grid-cols-3 lg:gap-8">
+              <div>
+                
+                <h2 className="text-3xl font-extrabold text-gray-900">Municipal Wastewater Treatment</h2>
+                <p className="mt-4 text-lg text-gray-500">
+                For further questions, contact our {' '}
+                  <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
+                    customer support
+                  </a>{' '}
+                  team.
+                </p>
+              </div>
+              <div className="wastewater-container mt-12 lg:mt-0 lg:col-span-2">
+                <dl className="space-y-12">
+                  {faqs.map((faq) => (
+                    <div key={faq.question}>
+                      <dt className="text-lg leading-6 font-medium text-gray-900">{faq.question}</dt>
+                      <dd className="mt-2 text-base text-gray-500">{faq.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer />
+      </div>
     )
   }

@@ -1,5 +1,6 @@
 import { Popover } from '@headlessui/react';
 import Header from '../components/header';
+import Footer from '@/components/footer';
 
 export default function Example() {
   return (
@@ -60,6 +61,7 @@ export default function Example() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
